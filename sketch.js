@@ -1,3 +1,5 @@
+'use strict'
+
 function setup(){
   createCanvas(640, 480);
 }
