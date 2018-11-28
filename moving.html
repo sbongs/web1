@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+<script>
+            let player1;
+            const keyW = 87;
+            const keyS = 83;
+            const keyA = 65;
+            const keyD = 68;
+            let speed = 3;
+            let collider = [];
+
+
+            function setup(){
+                createCanvas(1024, 768);
+                player1 = new players();
+            }
+
+            function draw(){
+                player1.show();
+                if (keyIsDown(keyW)){player1.move(keyW)}
+                if (keyIsDown(keyD)){player1.move(keyD)}
+                if (keyIsDown(keyA)){player1.move(keyA)}
+                if (keyIsDown(keyS)){player1.move(keyS)}
+            }
+
+            function players(){
+                this.x = width/2;
+                this.y = height/2;
+
+                ellipse(this.x, this.y, 10, 10);
+
+                this.move = function(pressedKey){
+                    if(pressedKey == keyW){this.y -= speed}
+                    else if(pressedKey == keyS){this.y += speed}
+                    else if(pressedKey == keyA){this.x -= speed}
+                    else if(pressedKey == keyD){this.x += speed}
+                }
+
+                this.show = function(){
+                    clear();
+                    fill('red');
+                    noStroke();
+                    ellipse(this.x, this.y, 10, 10);
+                }
+                
+            }
+        </script>
+</head>
+</html>
