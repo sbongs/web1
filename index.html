@@ -2,16 +2,34 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+        <title>Urge Score</title>
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>-->
         <!--<script src="sketch.js"></script>-->
     </head>
     <body>
-        <h2>First Html, Heading</h2>
-        <p>Paragrahping</p>
-        <p style="color:blue">Hi blue</p>
+        <article
+          id="urge"
+          data-score="2">
         <script>
-            document.write("\nHello javascript World!");              
+          let article = document.getElementById('urge');
+          document.write(`<p>${article.dataset['score']}</p>`)
         </script>
+        </article>
+        <button onclick="plusClick()">+</button>
+        <button onclick="minusClick()">-</button>
+        <script>
+        'use strict'
+        let article = document.getElementById('urge');
+            
+        function plusClick(){
+          article.dataset['score'] = Number(article.dataset['score']) + 1;  
+        }
+        
+        function minusClick(){
+          article.dataset['score'] = Number(article.dataset['score']) - 1;
+        }
+        </script>
+        <p></p>
         <a href="moving.html">go to moving page</a>
     </body>
 </html>
