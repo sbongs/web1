@@ -12,21 +12,26 @@
           data-score="2">
         <script>
           let article = document.getElementById('urge');
-          document.write(`<p>${article.dataset['score']}</p>`)
+          document.write(`<p id='slark'>${article.dataset['score']}</p>`)
         </script>
         </article>
         <button onclick="plusClick()">+</button>
         <button onclick="minusClick()">-</button>
         <script>
         'use strict'
-        let article = document.getElementById('urge');
             
         function plusClick(){
-          article.dataset['score'] = Number(article.dataset['score']) + 1;  
+          article.dataset['score'] = Number(article.dataset['score']) + 1;
+          let slark = document.getElementById('slark');
+          slark.innerText = article.dataset['score'];
         }
         
         function minusClick(){
-          article.dataset['score'] = Number(article.dataset['score']) - 1;
+          if(!(article.dataset['score'] <= 0)){
+            article.dataset['score'] = Number(article.dataset['score']) - 1;
+          }
+          let slark = document.getElementById('slark');
+          slark.innerText = article.dataset['score'];
         }
         </script>
         <p></p>
