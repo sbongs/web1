@@ -26,7 +26,7 @@ let physicalDiagnosis ={
 
 function diagnosis(diagnosisObject){
     for(key in diagnosisObject){
-        if(document.getElementbyName(key) == true){
+        if(document.getElementByName(key) == true){
             document.write(diagnosisObject[key]);
         }
     }
