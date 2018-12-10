@@ -1,9 +1,11 @@
 'use strict'
 
+// 예시.
 let hoffmanSign ={
     name:'Hoffman Sign',
     diagnosis:['hypertonia', 'corticospinal tract'],
 };
+
 
 let physicalDiagnosis ={
     'Hoffman':'hypertonia or corticospinal tract',
@@ -36,11 +38,8 @@ function diagnosis(diagnosisObject){
 }
 
 function makeCheckBox(diagnosisObject){
-    let n = 1;
     for(let key in diagnosisObject){
-        let tempNameStr = 'shoulderDiagnosis' + n;
-        document.write(`<input type=\'checkbox\' name=${tempNameStr} value=${key}>${key}</br>`)
-        n ++;
+        document.write(`<input type=\'checkbox\' name=${key}>${key}</br>`)
     }
 }
 
