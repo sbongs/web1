@@ -25,22 +25,19 @@ let physicalDiagnosis ={
 };
 
 function diagnosis(diagnosisObject){
-
-    let returnDiagnosis = {};
-
-    let i = 0;
-
     for(key in diagnosisObject){
-        if(diagnosisObject['_' + key] == true){
-            let tempKey = i + physicalDiagnosis[key];
+        if(document.getElementbyName(key) == true){
+            document.write(diagnosisObject[key]);
         }
     }
+    
 }
 
 function makeCheckBox(diagnosisObject){
     for(let key in diagnosisObject){
         document.write(`<input type=\'checkbox\' name=${key}>${key}</br>`)
     }
+    document.write(`<button onclick="diagnosis(physicalDiagnosis)">diagnosis!</button>`)
 }
 
 
