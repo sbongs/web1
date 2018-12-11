@@ -1,5 +1,7 @@
 'use strict'
 
+let vers = 0.002;
+
 // 예시.
 let hoffmanSign ={
     name:'Hoffman Sign',
@@ -25,20 +27,28 @@ let physicalDiagnosis ={
 };
 
 function diagnosis(diagnosisObject){
+    let diagText = "";
     for(let key in diagnosisObject){
-        if(document.getElementsByName(key) == true){
-            document.getElementById('diagnosisText').innerText = diagnosisObject[key];
+        if(document.getElementsByName(key)[0].checked == true){
+         diagText += diagnosisObject[key];
+         diagText += "\n";
         }
     }
-    
+    if(diagText != ""){
+      document.getElementById('diagnosisText').innerText = diagText;
+    }
 }
 
 function makeCheckBox(diagnosisObject){
+  document.write("Version : ");
+  document.write(vers);
+  document.write("<p></p>");
+
     for(let key in diagnosisObject){
         document.write(`<input type=\'checkbox\' name=${key}>${key}</br>`)
     }
     document.write('<p></p>');
-    document.write(`<button onclick="diagnosis(physicalDiagnosis)">diagnosis!</button>`)
+    document.write('<button onclick=\"diagnosis(physicalDiagnosis)\">diagnosis!</button>')
     document.write('<p id=\'diagnosisText\'>No Diseases for now</p>')
 }
 
