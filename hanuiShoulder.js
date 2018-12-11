@@ -10,21 +10,24 @@ let hoffmanSign ={
 
 
 let physicalDiagnosis ={
-    'Hoffman':'hypertonia or corticospinal tract',
+    'Hoffman':'hypertonia or corticospinal tract problem',
     '_Hoffman':hoffmanSign,
-    'External-rotation-lag-test':'',
-    'Internal-rotation-lag-test':'',
-    'Pain-arc-test':'',
-    'Cross-body-adduction-test':'',
-    'Neer\'s-test':'',
-    'Hawkins-test':'',
-    'Drop-arm-test':'',
+    'External-rotation-lag-test':'Infraspinatus & Supraspinatus problem',
+    'Internal-rotation-lag-test':'Subscapularis problem',
+    'Pain-arc-test':'Impingement Syndrome (LR+ 3.7, LR- 0.36)',
+    'Cross-body-adduction-test':'Impingement Syndrome (LR+ 1.9, LR- 0.42)',
+    'Neer\'s-test':'Impingement Syndrome (LR+ 1.30~35, LR- 0.37~82)',
+    'Hawkins-test':'Impingement Syndrome (LR+ 1.20~3.33, LR- 0.21~55)',
+    'Drop-arm-test':'Supraspinatus problem (LR+ 3.3, LR- 0.82)',
     'Empty-can-test':'',
     'Full-can-test':'',
     'Compression-rotation-test':'',
     'Yergason-test':'',
     'Apprehension-relocation-test':'',
+    // hawkins test + neer test = LR+ 1.6, LR- 0.43
+    // Empty can test + Full can test = LR+, LR-
 };
+
 
 function diagnosis(diagnosisObject){
     let diagText = "";
