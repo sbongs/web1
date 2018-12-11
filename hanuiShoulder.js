@@ -10,32 +10,34 @@ let hoffmanSign ={
 
 
 let physicalDiagnosis ={
-    'Hoffman':'hypertonia or corticospinal tract problem',
+    'Hoffman':'hypertonia or corticospinal tract',
     '_Hoffman':hoffmanSign,
-    'External-rotation-lag-test':'Infraspinatus & Supraspinatus problem',
-    'Internal-rotation-lag-test':'Subscapularis problem',
+    'External-rotation-lag-test':'Infraspinatus & Supraspinatus',
+    'Internal-rotation-lag-test':'Subscapularis',
     'Pain-arc-test':'Impingement Syndrome (LR+ 3.7, LR- 0.36)',
     'Cross-body-adduction-test':'Impingement Syndrome (LR+ 1.9, LR- 0.42)',
     'Neer\'s-test':'Impingement Syndrome (LR+ 1.30~35, LR- 0.37~82)',
     'Hawkins-test':'Impingement Syndrome (LR+ 1.20~3.33, LR- 0.21~55)',
-    'Drop-arm-test':'Supraspinatus problem (LR+ 3.3, LR- 0.82)',
-    'Empty-can-test':'',
-    'Full-can-test':'',
-    'Compression-rotation-test':'',
-    'Yergason-test':'',
-    'Apprehension-relocation-test':'',
+    'Drop-arm-test':'Supraspinatus (LR+ 3.3, LR- 0.82)',
+    'Empty-can-test':'Supraspinatus pathology',
+    'Full-can-test':'tear to the supraspinatus tendon or muscle (LR+ 1.78~4.2, LR- 0.22~63)',
+    'Compression-rotation-test':'SLAP (LR+ 3.91, LR- 0.64)',
+    'Yergason-test':'SLAP (LR+ 2.5, LR- 0.87)',
+    'Apprehension-relocation-test':'glenohumeral istability (LR+ 53, LR- 0.47)',
     // hawkins test + neer test = LR+ 1.6, LR- 0.43
     // Empty can test + Full can test = LR+, LR-
 };
 
-
 function diagnosis(diagnosisObject){
     let diagText = "";
+    let i = 1;
     for(let key in diagnosisObject){
-        if(document.getElementsByName(key)[0].checked == true){
-         diagText += diagnosisObject[key];
-         diagText += "\n";
-        }
+      if(document.getElementsByName(key)[0].checked == true){
+        diagText += (i + ". ");
+        diagText += diagnosisObject[key];
+        diagText += "\n";
+        i += 1;
+      }
     }
     if(diagText != ""){
       document.getElementById('diagnosisText').innerText = diagText;
