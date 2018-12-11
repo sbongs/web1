@@ -1,6 +1,6 @@
 'use strict'
 
-let vers = 0.002;
+let vers = 0.003;
 
 // 예시.
 let hoffmanSign ={
