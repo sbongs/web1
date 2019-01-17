@@ -35,6 +35,7 @@ function diagnosis(diagnosisObject){
       if(document.getElementsByName(key)[0].checked == true){
         diagText += (i + ". ");
         diagText += diagnosisObject[key];
+        diagText += (" | " + key);
         diagText += "\n";
         i += 1;
       }
