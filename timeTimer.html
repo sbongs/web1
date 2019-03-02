@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>WEB TimeTimer</title>
+    </head>
+    <body>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.3/p5.js"></script>
+        <script>
+            let startTime
+            let inputTime = 3000;
+
+            function setup() {
+                createCanvas(200, 200);
+                startTime = new Date()
+            }
+
+            function draw() {
+                let calStartTime = startTime.getHours()*3600 + startTime.getMinutes()*60 + startTime.getSeconds();
+                let currentDate = new Date();
+                let currentTime =  currentDate.getHours()*3600 +  currentDate.getMinutes()*60 +  currentDate.getSeconds();
+                let cumulativeTime = currentTime - calStartTime;
+                let deltaRad = radians(360 * (cumulativeTime/inputTime))
+                noStroke()
+                background(245);
+                fill(255, 0, 0)
+                ellipse(100, 100, 100, 100)
+                fill(255)
+                arc(100, 100, 100, 100, PI + HALF_PI, -HALF_PI + deltaRad);
+                fill(255)
+                stroke(100)
+                ellipse(100, 100, 8, 8)
+                
+                if ((currentTime - calStartTime) == inputTime) {
+                    console.log("End")
+                    noLoop()
+                }
+            }
+        </script>
+    </body>
+</html>
