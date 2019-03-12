@@ -10,10 +10,148 @@
 
           gtag('config', 'UA-134508872-1');
         </script>
+        <title>Wish & Progress Page</title>
+        <meta charset="utf-8">
+        <style>
+          @media(min-width: 800px){
+            body {
 
-        <title>어깨 체크박스</title>
+            }
+
+            h2.title-h2 {
+              text-align: center;
+              border-bottom: 2px solid black;
+              padding-bottom: 10px;
+              margin: 0px;
+            }
+
+            div#linkandothers{
+              display: grid;
+              grid-template-columns: 200px 1fr;
+            }
+
+            ul#links {
+              padding-left: 10px;
+              margin: 0px;
+              list-style-type:none;
+            }
+
+            h3#h3links{
+              margin: 0px;
+            }
+
+            div#links{
+              border-right: 2px solid black;
+            }
+
+            div#progress{
+              padding-left: 10px;
+            }
+          }
+          
+
+          @media(max-width: 799px) and (min-width: 500px){
+            body {
+              margin: 0 auto;
+            }
+
+            div#pagetop{
+              border-bottom: 2px solid black;
+            }
+            h2.title-h2 {
+              text-align: center;
+              padding: 0px;
+              margin: 0px;
+            }
+            
+            div#linkandothers{
+              display: grid;
+              grid-template-columns: 150px 1fr;
+            }
+
+            div#urgescore {
+
+            }
+            p#score-score {
+              margin: 0;
+            }
+            div#links {
+              border-right: 1px solid black;
+
+            }
+
+            
+
+            h3, h4, ul {
+              margin: 0;
+            }
+
+            div#wishlist {
+            }
+            } 
+
+
+        </style>
+        
     </head>
     <body>
-        <script src="hanuiShoulder.js"></script>
+        <div id="pagetop">
+        <h2 class="title-h2">Moving Dot</h2>
+        </div>
+        <div id="linkandothers">
+        <div name="links" id="links">
+            <div name="urgescore" id="urgescore">
+                <h3>Score</h3>
+                  <p id="score-score">1</p>
+            </div>
+            <h3 id="h3links">Links</h3>
+            <ul id="links">
+              <li>
+                <a href="https://sbongs.github.io/web1/index.html">Main Page</a>
+              </li>
+              <li>
+                <a href="https://sbongs.github.io/web1/moving.html">Dot moving</a>
+              </li>
+              <li>
+                <a href="https://sbongs.github.io/web1/checktest.html">Shoulder Check</a>
+              </li>
+              <li>
+                  <a href="https://sbongs.github.io/web1/minee.html">Minee</a>
+              </li>
+              <li>
+                  <a href="https://sbongs.github.io/web1/timeTimer.html">Time Timer</a>
+              </li>
+            </ul>
+        </div>
+        <div id="ShoulderPage">     
+            <script src="hanuiShoulder.js"></script>
+        </div>
+        </div>
+        <div name="monthlycheck" id="monthlycheck"></div>
+        
+        <div name="disqusdiv">
+        <div id="disqus_thread"></div>
+            <script>
+
+            /**
+            *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+            *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables*/
+            /*
+            var disqus_config = function () {
+            this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+            this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+            };
+            */
+            (function() { // DON'T EDIT BELOW THIS LINE
+            var d = document, s = d.createElement('script');
+            s.src = 'https://sbongs.disqus.com/embed.js';
+            s.setAttribute('data-timestamp', +new Date());
+            (d.head || d.body).appendChild(s);
+            })();
+            </script>
+            <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+        </div>
+
+
     </body>
 </html>
