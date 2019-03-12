@@ -13,22 +13,104 @@
         <title>Wish & Progress Page</title>
         <meta charset="utf-8">
         <style>
-          body {
-            border: 1px solid #cccccc;
-            width: 60%;
-            margin: 0 auto;
+          @media(min-width: 800px){
+            body {
+
+            }
+
+            h2.title-h2 {
+              text-align: center;
+              border-bottom: 2px solid black;
+              padding-bottom: 10px;
+              margin: 0px;
+            }
+
+            div#linkandothers{
+              display: grid;
+              grid-template-columns: 200px 1fr;
+            }
+
+            ul#links {
+              padding-left: 10px;
+              margin: 0px;
+              list-style-type:none;
+            }
+
+            h3#h3links{
+              margin: 0px;
+            }
+
+            div#links{
+              border-right: 2px solid black;
+            }
+
+            div#progress{
+              padding-left: 10px;
+            }
           }
+          
+
+          @media(max-width: 799px){
+            body {
+              margin: 0 auto;
+            }
+
+            div#pagetop{
+              border-bottom: 2px solid black;
+            }
+            h2.title-h2 {
+              text-align: center;
+              padding: 0px;
+              margin: 0px;
+            }
+            
+            div#linkandothers{
+              display: grid;
+              grid-template-columns: 150px 1fr;
+            }
+
+            div#urgescore {
+
+            }
+            p#score-score {
+              margin: 0;
+            }
+            div#links {
+              border-right: 1px solid black;
+
+            }
+
+            
+
+            h3, h4, ul {
+              margin: 0;
+            }
+
+            div#wishlist {
+            }
+            } 
+
+
         </style>
         
     </head>
     <body>
-        <div name="urgescore" id="urgescore">
-            <h3 style="margin-bottom: 1px">Score</h3>
-              <div style="margin-left:10px">1</div>
+        <div id="pagetop">
+        <h2 class="title-h2">My Page</h2>
+        
         </div>
+
+        <div id="linkandothers">
         <div name="links" id="links">
-            <h3 style="margin-bottom: 1px">Links</h3>
-            <ul>
+            <div name="urgescore" id="urgescore">
+                <h3>Score</h3>
+                  <p id="score-score">1</p>
+            </div>
+            <h3 id="h3links">Links</h3>
+            <ul id="links">
+              <li>
+                <a href="https://sbongs.github.io/web1/index.html">Main Page</a>
+              </li>
               <li>
                 <a href="https://sbongs.github.io/web1/moving.html">Dot moving</a>
               </li>
@@ -47,7 +129,7 @@
         <div name="progress" id="progress" style="margin-top: 10px">
           <h3>Progresses</h3>
           <div name="Programming-prog" id="Programming-prog" style="margin-left: 7px">
-              <h4 style="margin-bottom: 1px">Programming-progresses</h4>
+              <h4>Programming-progresses</h4>
               <label for="htmlprog">HTML(soloLearn)</label>
                 <progress id="htmlprog" max="100" value="100"></progress>
             </br>
@@ -61,16 +143,16 @@
                 <progress id="css-learnlayout" max="100" value="40"></progress>
             </br>
               <label for="opentutorial-html">opentutorial-html</label>
-                <progress id="opentutorial-html" max="100" value="90"></progress>
+                <progress id="opentutorial-html" max="100" value="100"></progress>
             </br>
               <label for="opentutorial-css">opentutorial-css</label>
-                <progress id="opentutorial-css" max="100" value="0"></progress>
+                <progress id="opentutorial-css" max="100" value="80"></progress>
         </div>
 
 
 
         <div name="KMD-prog" id="KMD-prog" style="margin-left: 7px">
-            <h4 style="margin-bottom: 1px">KMD-progresses</h4>
+            <h4>KMD-progresses</h4>
             <label for="aaos">AAOS 정형외과학</label>
               <progress id="aaos" max="100" value="3"></progress>
           </br>
@@ -83,7 +165,7 @@
 
 
         <div name="Reading-prog" id="Reading-prog" style="margin-left: 7px">
-            <h4 style="margin-bottom: 1px">Reading-progresses</h4>
+            <h4>Reading-progresses</h4>
             <label for="newPower">뉴파워: 새로운 권력의 탄생</label>
               <progress id="newPower" max="100" value="7"></progress>
           </br>
@@ -111,6 +193,8 @@
             <li>스파이더맨: 뉴 유니버스</li>
             <li>우리들</li>
           </ul>
+        </div>
+        </div>
         </div>
         <div name="monthlycheck" id="monthlycheck"></div>
         
