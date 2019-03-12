@@ -96,10 +96,8 @@
     </head>
     <body>
         <div id="pagetop">
-        <h2 class="title-h2">Main Page</h2>
-        
+        <h2 class="title-h2">Moving Dot</h2>
         </div>
-
         <div id="linkandothers">
         <div name="links" id="links">
             <div name="urgescore" id="urgescore">
@@ -125,10 +123,9 @@
               </li>
             </ul>
         </div>
-          
-        <h3>Moving Practice</h3>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
-<script>
+        <div id="movingPage">
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/0.7.2/p5.js"></script>
+            <script>
             let player1;
             const keyW = 87;
             const keyS = 83;
@@ -139,7 +136,7 @@
 
 
             function setup(){
-                createCanvas(1024, 768);
+                createCanvas(400, 400);
                 player1 = new players();
             }
 
@@ -173,7 +170,8 @@
                 }
                 
             }
-        </script>
+            </script>
+        </div>
         </div>
         <div name="monthlycheck" id="monthlycheck"></div>
         
@@ -198,7 +196,7 @@
             })();
             </script>
             <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-</div>
+        </div>
 
 
     </body>
